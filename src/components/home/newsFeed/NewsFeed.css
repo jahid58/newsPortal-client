@@ -1,0 +1,6 @@
+.news img {
+  height: 150px;
+  width: 100px;
+  background-size: cover;
+  object-fit: contain;
+}
