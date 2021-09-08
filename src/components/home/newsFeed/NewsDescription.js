@@ -6,10 +6,11 @@ const NewsDescription = () => {
   const [description, setDescription] = useState();
   const { id } = useParams();
   useEffect(() => {
-    fetch(`http://localhost:3000/description/${id}`)
+    fetch(`https://glacial-mesa-02011.herokuapp.com/description/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setDescription(data);
+        console.log(data);
       });
   }, [id]);
   return (
@@ -22,6 +23,7 @@ const NewsDescription = () => {
             style={{ height: "40vh", width: "100vw", margin: "30px" }}
             alt="this is news banner"
           />
+          <h1>{description.headline}</h1>
           <p>{description.description}</p>
         </div>
       )}

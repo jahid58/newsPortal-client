@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 const News = (props) => {
   const { _id, headline, image } = props.news;
   return (
-    <div className="col-md-3">
-      <div className="news shadow rounded">
+    <div className="col-md-4 p-2 news__box ">
+      <div className="news shadow rounded  bg-light">
         <img
           src={`data:image/png;base64,${image.img}`}
           alt=" this is image"

@@ -22,7 +22,7 @@ const AddNews = () => {
     formData.append("headline", info.headline);
     formData.append("description", info.description);
 
-    fetch("http://localhost:3000/addNews", {
+    fetch("http://localhost:4200/addNews", {
       method: "POST",
       body: formData,
     })

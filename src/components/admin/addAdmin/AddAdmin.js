@@ -5,11 +5,11 @@ const AddAdmin = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     const adminData = {
-      name: data.name,
+      password: data.password,
       email: data.email,
     };
 
-    fetch("https://localhost:3000/addAdmin", {
+    fetch("https://glacial-mesa-02011.herokuapp.com/addAdmin", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -26,10 +26,10 @@ const AddAdmin = () => {
           <br />
           <br />
           <input
-            placeholder="Name"
+            placeholder="Password"
             className="form-control input"
             type="text"
-            {...register("name", { required: true })}
+            {...register("password", { required: true })}
           />{" "}
           <br />
           <br />

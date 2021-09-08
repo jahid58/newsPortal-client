@@ -1,6 +1,9 @@
+.news__box {
+  max-height: 450px;
+}
 .news img {
-  height: 150px;
-  width: 100px;
+  width: 100%;
+  height: 250px;
   background-size: cover;
   object-fit: contain;
 }

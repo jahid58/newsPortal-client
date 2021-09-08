@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Navbar, Nav, Dropdown } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import "./TopBar.css";
 const TopBar = () => {
   return (
@@ -51,10 +51,15 @@ const TopBar = () => {
                 <Dropdown.Toggle id="dropdown-basic">Category</Dropdown.Toggle>
 
                 <Dropdown.Menu>
-                  <Dropdown.Item href="#/action-1">Sport</Dropdown.Item>
-                  <Dropdown.Item href="#/action-2">International</Dropdown.Item>
-                  <Dropdown.Item href="#/action-3">
-                    Something else
+                  <Dropdown.Item href="">
+                    {" "}
+                    <Link to="/category/sports"> Sports</Link>
+                  </Dropdown.Item>
+                  <Dropdown.Item href="">
+                    <Link to="/category/international"> international</Link>
+                  </Dropdown.Item>
+                  <Dropdown.Item href="">
+                    <Link to="/category/entertainment"> entertainment</Link>
                   </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>

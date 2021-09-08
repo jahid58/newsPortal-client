@@ -6,14 +6,15 @@ import Sidebar from "./sidebar/Sidebar";
 function Home() {
   return (
     <div>
-      <TopBar />
       <MyCarousel></MyCarousel>
 
-      <div className="col-md-9">
-        <NewsFeed></NewsFeed>
-      </div>
-      <div className="col-md-3">
-        <Sidebar></Sidebar>
+      <div className="row mt-4 bg-danger">
+        <div className="col-md-9">
+          <NewsFeed></NewsFeed>
+        </div>
+        <div className="col-md-2">
+          <Sidebar></Sidebar>
+        </div>
       </div>
     </div>
   );

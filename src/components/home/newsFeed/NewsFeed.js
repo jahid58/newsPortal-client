@@ -6,11 +6,11 @@ import News from "./News";
 const NewsFeed = () => {
   const [newses, setNewses] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:3000/getNews")
+    fetch("https://glacial-mesa-02011.herokuapp.com/getNews")
       .then((res) => res.json())
       .then((data) => {
-        setNewses(data);
-        console.log(newses);
+        const newData = data.reverse();
+        setNewses(newData);
       });
   }, []);
 
