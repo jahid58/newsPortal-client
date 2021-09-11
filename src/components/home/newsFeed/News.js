@@ -11,10 +11,8 @@ const News = (props) => {
           alt=" this is image"
           className="img"
         />
-        <div className="news__info">
-          <h6 className="m-2 " style={{ overflow: "hidden" }}>
-            {headline}
-          </h6>
+        <div className="news__info pb-2">
+          <h6 className="m-2 ">{headline}</h6>
           <Link to={`/description/${_id}`}> Read more</Link>
         </div>
       </div>

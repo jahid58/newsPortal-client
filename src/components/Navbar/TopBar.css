@@ -3,6 +3,10 @@
   font-size: 16px;
   background-color: #140a42;
 }
+.logo {
+  color: white;
+  margin-right: 20px;
+}
 .menu-item {
   color: rgb(252, 248, 248);
   margin-left: 10px;

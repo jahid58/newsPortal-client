@@ -28,7 +28,8 @@ const Admin = () => {
             <AddAdmin></AddAdmin>
           </div>
         </div>
-      )}{" "}
+      )}
+      {!isAdmin && <h2>Users are not allowed in this page</h2>}
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import React from "react";
 import TopBar from "../Navbar/TopBar";
+import Footer from "./footer/Footer";
 import MyCarousel from "./MyCarousel";
 import NewsFeed from "./newsFeed/NewsFeed";
 import Sidebar from "./sidebar/Sidebar";
@@ -12,10 +13,11 @@ function Home() {
         <div className="col-md-9">
           <NewsFeed></NewsFeed>
         </div>
-        <div className="col-md-2">
+        <div className="col-md-3">
           <Sidebar></Sidebar>
         </div>
       </div>
+      <Footer></Footer>
     </div>
   );
 }

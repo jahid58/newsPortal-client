@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Navbar, Nav, Dropdown } from "react-bootstrap";
-import { NavLink, Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./TopBar.css";
 const TopBar = () => {
   return (
@@ -32,13 +32,7 @@ const TopBar = () => {
               >
                 Admin
               </NavLink>
-              <NavLink
-                className="menu-item"
-                style={{ textDecoration: "none" }}
-                to="/blog"
-              >
-                Blog
-              </NavLink>
+
               <NavLink
                 className="menu-item"
                 style={{ textDecoration: "none" }}
@@ -51,20 +45,21 @@ const TopBar = () => {
                 <Dropdown.Toggle id="dropdown-basic">Category</Dropdown.Toggle>
 
                 <Dropdown.Menu>
-                  <Dropdown.Item href="">
+                  <Dropdown.Item>
                     {" "}
-                    <Link to="/category/sports"> Sports</Link>
+                    <Link to="/category/sports">Sports</Link>
                   </Dropdown.Item>
-                  <Dropdown.Item href="">
-                    <Link to="/category/international"> international</Link>
+                  <Dropdown.Item>
+                    <Link to="/category/international">international</Link>
                   </Dropdown.Item>
-                  <Dropdown.Item href="">
-                    <Link to="/category/entertainment"> entertainment</Link>
+                  <Dropdown.Item>
+                    <Link to="/category/entertainment">entertainment </Link>
                   </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
             </Nav>
           </Navbar.Collapse>
+          <h3 className="logo">News Portal</h3>
         </Navbar>
       </div>
     </div>

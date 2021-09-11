@@ -10,20 +10,20 @@ const NewsDescription = () => {
       .then((res) => res.json())
       .then((data) => {
         setDescription(data);
-        console.log(data);
       });
   }, [id]);
   return (
-    <div>
+    <div className="m-5 ">
       {description && (
         <div>
-          {" "}
           <img
             src={`data:image/png;base64,${description.image.img}`}
-            style={{ height: "40vh", width: "100vw", margin: "30px" }}
+            style={{ height: "40vh", width: "100vw" }}
             alt="this is news banner"
           />
+
           <h1>{description.headline}</h1>
+
           <p>{description.description}</p>
         </div>
       )}

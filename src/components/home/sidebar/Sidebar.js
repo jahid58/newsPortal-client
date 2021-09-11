@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function Sidebar() {
   const [newses, setNewses] = useState([]);
@@ -8,22 +9,25 @@ function Sidebar() {
       .then((data) => {
         const newData = data.slice(0, 5);
         setNewses(newData);
-        console.log(newses);
       });
   }, []);
   return (
-    <div className="bg-primary " style={{ width: "max-content" }}>
-      <h1 className="text-white p-2">Latest News</h1>
-      <div className="row m-2 ">
+    <div className="bg-primary  p-2 ">
+      <h1 className="text-white">Latest News</h1>
+      <div className=" ">
         {newses.length &&
           newses.map((news) => (
-            <div className="bg-light mt-5 p-2">
-              <img
-                src={`data:image/png;base64,${news.image.img}`}
-                alt=""
-                style={{ height: "100px", width: "fit-content" }}
-              />
-              <p>{news.headline}</p>
+            <div className="bg-light mt-5 d-flex ">
+              <div className="mx-1">
+                <img
+                  src={`data:image/png;base64,${news.image.img}`}
+                  alt=""
+                  style={{ height: "150px", width: "120px" }}
+                />{" "}
+                <Link to={`/description/${news._id}`}> Read more</Link>
+              </div>
+
+              <p className="m-2">{news.headline}</p>
             </div>
           ))}
       </div>
